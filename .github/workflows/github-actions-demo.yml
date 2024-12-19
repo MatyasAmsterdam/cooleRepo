@@ -18,7 +18,7 @@ jobs:
         if [ $((RANDOM % 2)) -eq 0 ]; then
           echo "LESSGOOO You can deploy!"
           exit 0
-        else;
+        else
           echo "L bozo your ahh is nOt deploying"
           exit 1
         fi
