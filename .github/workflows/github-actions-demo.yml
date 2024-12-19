@@ -9,4 +9,17 @@ jobs:
       - name: Assert current minute time is even
         run: |
           python assert_even_time.py
-  
+
+  CoinFlip:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Random 50/50 deciding whether you can deploy or not
+      run: |
+        if [ $((RANDOM % 2)) -eq 0 ]; then
+          echo "LESSGOOO You can deploy!"
+          exit 0
+        else;
+          echo "L bozo your ahh is nOt deploying"
+          exit 1
+        fi
+
