@@ -5,6 +5,7 @@ jobs:
   CheckTime:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Assert current minute time is even
         run: |
           python assert_even_time.py
